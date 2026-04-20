@@ -4,9 +4,10 @@ phases:
   pre_build:
     commands:
       - pip install -r requirements.txt
+  build:
+    commands:
+      - rm -rf .elasticbeanstalk
 
 artifacts:
   files:
     - '**/*'
-  exclude-paths:
-    - .elasticbeanstalk/**
